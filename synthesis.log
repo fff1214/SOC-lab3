@@ -1,0 +1,510 @@
+
+*** Running vivado
+    with args -log fir.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source fir.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/ubuntu/SOC/lab3/fir/fir.srcs/utils_1/imports/synth_1/fir.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/ubuntu/SOC/lab3/fir/fir.srcs/utils_1/imports/synth_1/fir.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top fir -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 308313
+CRITICAL WARNING: [Synth 8-9339] data object 'sm_tdata_r' is already declared [/home/ubuntu/SOC/lab3/fir/fir.v:225]
+INFO: [Synth 8-6826] previous declaration of 'sm_tdata_r' is from here [/home/ubuntu/SOC/lab3/fir/fir.v:68]
+CRITICAL WARNING: [Synth 8-10006] second declaration of 'sm_tdata_r' ignored [/home/ubuntu/SOC/lab3/fir/fir.v:225]
+WARNING: [Synth 8-6901] identifier 'acc' is used before its declaration [/home/ubuntu/SOC/lab3/fir/fir.v:213]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 206 ; free virtual = 3493
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+WARNING: [Synth 8-6104] Input port 'awvalid' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:72]
+WARNING: [Synth 8-6104] Input port 'awaddr' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:73]
+WARNING: [Synth 8-6104] Input port 'wvalid' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:74]
+WARNING: [Synth 8-6104] Input port 'wdata' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:75]
+WARNING: [Synth 8-6104] Input port 'rready' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:77]
+WARNING: [Synth 8-6104] Input port 'arvalid' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:78]
+WARNING: [Synth 8-6104] Input port 'araddr' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+WARNING: [Synth 8-6104] Input port 'ss_tvalid' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:82]
+WARNING: [Synth 8-6104] Input port 'ss_tdata' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:83]
+WARNING: [Synth 8-6104] Input port 'ss_tlast' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:84]
+WARNING: [Synth 8-6104] Input port 'sm_tready' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:86]
+WARNING: [Synth 8-6104] Input port 'tap_Do' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:100]
+WARNING: [Synth 8-6104] Input port 'data_Do' has an internal driver [/home/ubuntu/SOC/lab3/fir/fir.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (0#1) [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+WARNING: [Synth 8-6014] Unused sequential element genblk1.wready_r_reg was removed.  [/home/ubuntu/SOC/lab3/fir/fir.v:71]
+WARNING: [Synth 8-3848] Net wready in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:8]
+WARNING: [Synth 8-3848] Net genblk1.data_A_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:105]
+WARNING: [Synth 8-3848] Net genblk1.data_Do_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:106]
+WARNING: [Synth 8-3848] Net genblk1.tap_Do_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:95]
+WARNING: [Synth 8-3848] Net genblk1.tap_WE_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:91]
+WARNING: [Synth 8-3848] Net genblk1.tap_EN_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:92]
+WARNING: [Synth 8-3848] Net genblk1.tap_Di_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:93]
+WARNING: [Synth 8-3848] Net genblk1.tap_A_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:94]
+WARNING: [Synth 8-3848] Net genblk1.data_WE_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:102]
+WARNING: [Synth 8-3848] Net genblk1.data_EN_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:103]
+WARNING: [Synth 8-3848] Net genblk1.data_Di_r in module/entity fir does not have driver. [/home/ubuntu/SOC/lab3/fir/fir.v:104]
+WARNING: [Synth 8-7129] Port wready in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_WE[3] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_WE[2] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_WE[1] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_WE[0] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_EN in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[31] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[30] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[29] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[28] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[27] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[26] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[25] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[24] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[23] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[22] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[21] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[20] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[19] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[18] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[17] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[16] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[15] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[14] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[13] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[12] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[11] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[10] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[9] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[8] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[7] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[6] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[5] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[4] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[3] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[2] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[1] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[0] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[11] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[10] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[9] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[8] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[7] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[6] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[5] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[4] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[3] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[2] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[1] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[0] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_WE[3] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_WE[2] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_WE[1] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_WE[0] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_EN in module fir is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 1233 ; free virtual = 4520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 1270 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 1270 ; free virtual = 4557
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 1267 ; free virtual = 4554
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ubuntu/SOC/lab3/fir/fir.srcs/constrs_1/new/constraints.xdc]
+CRITICAL WARNING: [Common 17-170] Unknown option '-waveform{0.000', please type 'create_clock -help' for usage info. [/home/ubuntu/SOC/lab3/fir/fir.srcs/constrs_1/new/constraints.xdc:1]
+Finished Parsing XDC File [/home/ubuntu/SOC/lab3/fir/fir.srcs/constrs_1/new/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2919.086 ; gain = 0.000 ; free physical = 1221 ; free virtual = 4508
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2919.086 ; gain = 0.000 ; free physical = 1221 ; free virtual = 4508
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1282 ; free virtual = 4569
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1282 ; free virtual = 4569
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1282 ; free virtual = 4569
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1281 ; free virtual = 4568
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP genblk1.acc1, operation Mode is: A*B.
+DSP Report: operator genblk1.acc1 is absorbed into DSP genblk1.acc1.
+DSP Report: operator genblk1.acc1 is absorbed into DSP genblk1.acc1.
+DSP Report: Generating DSP genblk1.acc1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1.acc1 is absorbed into DSP genblk1.acc1.
+DSP Report: operator genblk1.acc1 is absorbed into DSP genblk1.acc1.
+DSP Report: Generating DSP genblk1.acc1, operation Mode is: A*B.
+DSP Report: operator genblk1.acc1 is absorbed into DSP genblk1.acc1.
+DSP Report: operator genblk1.acc1 is absorbed into DSP genblk1.acc1.
+DSP Report: Generating DSP genblk1.acc1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1.acc1 is absorbed into DSP genblk1.acc1.
+DSP Report: operator genblk1.acc1 is absorbed into DSP genblk1.acc1.
+WARNING: [Synth 8-7129] Port wready in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_WE[3] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_WE[2] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_WE[1] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_WE[0] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_EN in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[31] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[30] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[29] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[28] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[27] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[26] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[25] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[24] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[23] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[22] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[21] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[20] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[19] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[18] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[17] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[16] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[15] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[14] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[13] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[12] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[11] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[10] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[9] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[8] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[7] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[6] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[5] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[4] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[3] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[2] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[1] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_Di[0] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[11] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[10] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[9] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[8] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[7] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[6] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tap_A[5] in module fir is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin awvalid with 1st driver pin 'genblk1.awvalid_r_reg/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin awvalid with 2nd driver pin 'awvalid' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin arvalid with 1st driver pin 'genblk1.arvalid_r_reg/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:78]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin arvalid with 2nd driver pin 'arvalid' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin rready with 1st driver pin 'genblk1.rready_r_reg/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:77]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin rready with 2nd driver pin 'rready' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[11] with 1st driver pin 'genblk1.araddr_r_reg[11]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[11] with 2nd driver pin 'araddr[11]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[10] with 1st driver pin 'genblk1.araddr_r_reg[10]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[10] with 2nd driver pin 'araddr[10]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[9] with 1st driver pin 'genblk1.araddr_r_reg[9]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[9] with 2nd driver pin 'araddr[9]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[8] with 1st driver pin 'genblk1.araddr_r_reg[8]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[8] with 2nd driver pin 'araddr[8]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[7] with 1st driver pin 'genblk1.araddr_r_reg[7]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[7] with 2nd driver pin 'araddr[7]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[6] with 1st driver pin 'genblk1.araddr_r_reg[6]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[6] with 2nd driver pin 'araddr[6]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[5] with 1st driver pin 'genblk1.araddr_r_reg[5]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[5] with 2nd driver pin 'araddr[5]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[4] with 1st driver pin 'genblk1.araddr_r_reg[4]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[4] with 2nd driver pin 'araddr[4]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[3] with 1st driver pin 'genblk1.araddr_r_reg[3]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[3] with 2nd driver pin 'araddr[3]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[2] with 1st driver pin 'genblk1.araddr_r_reg[2]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[2] with 2nd driver pin 'araddr[2]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[1] with 1st driver pin 'genblk1.araddr_r_reg[1]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[1] with 2nd driver pin 'araddr[1]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[0] with 1st driver pin 'genblk1.araddr_r_reg[0]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin araddr[0] with 2nd driver pin 'araddr[0]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin sm_tready with 1st driver pin 'genblk1.sm_tready_r_reg/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:86]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin sm_tready with 2nd driver pin 'sm_tready' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[31]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[30]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[29]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[28]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[27]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[26]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[25]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[24]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[23]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[22]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[21]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[20]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[19]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[18]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[17]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[16]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[15]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[14]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[13]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[12]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[11]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[10]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[9]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[8]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[7]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[6]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[5]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[4]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[3]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[2]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[1]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'genblk1.sm_tdata_r_reg[0]__0/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SOC/lab3/fir/fir.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin wvalid with 1st driver pin 'genblk1.wvalid_r_reg/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:74]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin wvalid with 2nd driver pin 'wvalid' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin awaddr[11] with 1st driver pin 'genblk1.awaddr_r_reg[11]/Q' [/home/ubuntu/SOC/lab3/fir/fir.v:73]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin awaddr[11] with 2nd driver pin 'awaddr[11]' [/home/ubuntu/SOC/lab3/fir/fir.v:1]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1275 ; free virtual = 4567
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1159 ; free virtual = 4450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1159 ; free virtual = 4450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1145 ; free virtual = 4437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1146 ; free virtual = 4437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1146 ; free virtual = 4437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1146 ; free virtual = 4437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1146 ; free virtual = 4437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1146 ; free virtual = 4437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1146 ; free virtual = 4437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUF  |    83|
+|2     |OBUFT |    87|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 1146 ; free virtual = 4437
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 286 critical warnings and 56 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2919.086 ; gain = 0.000 ; free physical = 1203 ; free virtual = 4494
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2919.094 ; gain = 16.008 ; free physical = 1203 ; free virtual = 4494
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2919.094 ; gain = 0.000 ; free physical = 1283 ; free virtual = 4575
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2919.094 ; gain = 0.000 ; free physical = 1228 ; free virtual = 4519
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: e43f6fba
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 127 Warnings, 135 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2919.094 ; gain = 16.016 ; free physical = 1402 ; free virtual = 4694
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/SOC/lab3/fir/fir.runs/synth_1/fir.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fir_utilization_synth.rpt -pb fir_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 19 10:57:50 2023...
